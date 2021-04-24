@@ -2,6 +2,7 @@
   <b-container
     fluid
   >
+    <h2>table</h2>
     <b-table
       striped
       hover

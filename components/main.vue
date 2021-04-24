@@ -24,7 +24,7 @@
           id="password"
           v-model="user.password"
           placeholder="Enter password"
-          type="text"
+          type="password"
           required
         />
       </b-form-group>
@@ -72,8 +72,5 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  .form {
-    width: 50%;
-  }
 }
 </style>
