@@ -18,7 +18,10 @@
     "@nuxtjs/axios": "^5.12.5",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.4.0",
+    "@nuxtjs/vuetify": "0.5.5",
+    "cookie-universal-nuxt": "^2.1.4",
     "gh-pages": "^2.2.0",
+    "debounce": "^1.2.0",
     "nuxt": "^2.15.4"
   },
   "devDependencies": {

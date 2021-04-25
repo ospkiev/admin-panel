@@ -35,14 +35,16 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/vuetify',
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
+    'cookie-universal-nuxt',
   ],
   axios: {
     https: true,
   },
   build: {
-    vendor: ['@nuxtjs/axios'],
+    vendor: ['@nuxtjs/axios', '@nuxtjs/vuetify', 'bootstrap-vue/nuxt'],
   },
 };

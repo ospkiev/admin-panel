@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="main">
+  <b-container class="main">
     <b-form
       class="form"
       @submit.prevent="onSubmit"
@@ -32,10 +32,10 @@
         type="submit"
         variant="primary"
       >
-        Enter
+        Login
       </b-button>
     </b-form>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -57,7 +57,7 @@ export default {
   methods: {
     onSubmit() {
       if (this.user.login === this.login && this.user.password === this.password) {
-        this.$router.push('/tabel');
+        this.$router.push('/table');
       } else {
         alert('Invalid Login or Password!');
       }
@@ -72,5 +72,6 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 </style>

@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import tabel from '~/components/tabel.vue';
+import tabel from '~/components/table.vue';
 
 export default {
   components: {
     tabel,
   },
   async fetch({ store }) {
-    await store.dispatch('getmode/fetch');
+    await store.dispatch('table/fetch');
   },
 };
 </script>

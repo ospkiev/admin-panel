@@ -1,18 +1,20 @@
+import urls from '~/constants/urls.js';
+import key from '~/constants/key.js';
 
 export const state = () => ({
-  winners: [],
+  table: [],
 });
 
 export const mutations = {
-  SET_USERS(state, data) {
-    state.winners = data;
+  SET_TABLE(state, data) {
+    state.table = data;
   },
 };
 export const actions = {
   async fetch({ commit }) {
     try {
-      const { data } = await this.$axios.get('https://starnavi-frontend-test-task.herokuapp.com/winners');
-      commit('SET_USERS', data);
+      const { data } = await this.$axios.post(`${urls.getData}/table?Key=${key.key}`);
+      commit('SET_TABLE', data.Data);
       return false;
     } catch (error) {
       return error;
