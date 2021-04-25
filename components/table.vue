@@ -63,7 +63,7 @@
       </v-data-table>
       <v-flex xs12>
         <v-pagination
-          v-model="pagination.page"
+          v-model="page"
           circle
           total-visible="10"
           :length="pages"
@@ -80,10 +80,7 @@ import headers from '~/constants/table-headers.js';
 export default {
   name: 'TableComponent',
   data: () => ({
-    pagination: {
-      descending: true,
-      page: 1,
-    },
+    page: 1,
     limit: 10,
     dialog: false,
   }),
@@ -101,7 +98,8 @@ export default {
       return headers.table;
     },
     paginationTable() {
-      return this.table.slice((this.page * this.limit), (this.page * this.limit) + this.limit);
+      return this.table
+        .slice(((this.page - 1) * this.limit), ((this.page - 1) * this.limit) + this.limit);
     },
   },
 };
@@ -110,6 +108,10 @@ export default {
 <style lang="scss" scoped>
 .layout {
   display: block;
+  .flex.xs12 {
+    display: grid;
+    justify-content: center;
+  }
   ul {
     list-style: none;
   }
