@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   router: {
-    base: '',
+    base: '/admin-panel/',
   },
   head: {
     title: 'admin-panel',
